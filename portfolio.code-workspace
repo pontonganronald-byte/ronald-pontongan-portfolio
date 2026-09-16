@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Pictures/Screenshots"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "L&D review form"
+	}
+}
