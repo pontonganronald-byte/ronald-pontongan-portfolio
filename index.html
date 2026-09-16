@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Ronald Pontongan's cosmic portfolio. Game enthusiast, creative thinker, and lifelong learner from Digos, Davao del Sur.">
+	<title>Ronald Pontongan | Cosmic Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Moving Galaxy Backdrop (Uploaded Cosmic Nebula) -->
+	<div class="galaxy-backdrop" aria-hidden="true"></div>
+
+	<!-- HTML5 Canvas Background Starfield -->
+	<canvas id="galaxy-canvas"></canvas>
+	
+	<!-- Subtle ambient noise overlay for organic depth -->
+	<div class="site-noise" aria-hidden="true"></div>
+
+	<!-- Fixed Navigation Header -->
+	<header class="site-header" id="top">
+		<nav class="nav container" aria-label="Main navigation">
+			<a class="brand" href="#home" aria-label="Ronald Pontongan home">
+				<span class="logo-lockup" aria-hidden="true"><b>P</b><em>ontongan</em></span>
+				<span class="sr-only">Ronald Pontongan</span>
+			</a>
+			<button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+			<div class="nav-links">
+				<a class="active" href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#skills">Skills</a>
+				<a href="#projects">Projects</a>
+				<a href="#gallery">Gallery</a>
+				<a href="#contact">Contact</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Hero Section -->
+		<section class="hero section" id="home">
+			<div class="container hero-grid">
+				<div class="hero-copy reveal">
+					<p class="eyebrow"><span></span> Digos City, Davao del Sur</p>
+					<h1>Hi, I'm <em>Ronald</em><br> Pontongan.</h1>
+					<p class="hero-role">Curious mind <span>/</span> Game enthusiast <span>/</span> Creative learner</p>
+					<p class="hero-intro">Exploring new ideas, journeying through code, and turning cosmic curiosity into memorable web experiences.</p>
+					<div class="hero-actions">
+						<a class="button button-primary galaxy-btn" href="#projects">View my work <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+						<a class="button button-quiet galaxy-btn" href="#contact">Contact me <i class="fa-solid fa-arrow-down"></i></a>
+					</div>
+					<div class="hero-socials" aria-label="Social links">
+						<span>Connect</span>
+						<a class="social-link galaxy-btn" href="https://www.facebook.com/ronald.pontongan" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+						<a class="social-link galaxy-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+						<a class="social-link galaxy-btn" href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+						<a class="social-link galaxy-btn" href="mailto:hello@ronaldpontongan.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+					</div>
+				</div>
+				<div class="hero-visual reveal reveal-delay">
+					<div class="portrait-frame glass-card">
+						<img src="images/profile.png" data-fallback="images/profile.jpg" alt="Ronald Pontongan profile picture">
+						<span class="portrait-logo" aria-hidden="true"><b>P</b><em>ontongan</em></span>
+						<div class="portrait-note glass-card">
+							<span>Status</span>
+							<strong>Exploring the Stars</strong>
+						</div>
+					</div>
+					<div class="orbit orbit-one"></div>
+					<div class="orbit orbit-two"></div>
+					<span class="visual-number">01</span>
+				</div>
+			</div>
+			<a class="scroll-cue" href="#about">
+				<span>Scroll to explore</span>
+				<i class="fa-solid fa-arrow-down"></i>
+			</a>
+		</section>
+
+		<!-- About Section -->
+		<section class="about section" id="about">
+			<div class="container section-grid">
+				<div class="section-heading reveal">
+					<p class="eyebrow"><span></span> A little about me</p>
+					<h2>Still becoming<br><em>who I am.</em></h2>
+				</div>
+				<div class="about-content glass-card reveal">
+					<p class="lead">I'm Ronald from Digos City. I find inspiration in the quiet focus of online games, the mysteries of deep space, and the thrill of turning creative ideas into tangible code.</p>
+					<p>There is no final version of a creator. This portfolio is a constellation of my ongoing projects, growing technical skills, and boundless enthusiasm for digital design.</p>
+					<div class="info-list">
+						<div><span>Based in</span><strong>Digos City, Davao del Sur</strong></div>
+						<div><span>Education</span><strong>Continuous Self-Directed Learning</strong></div>
+						<div><span>Interests</span><strong>Online Games, Web Tech, Astronomy</strong></div>
+						<div><span>Focus</span><strong>Front-End Interactive Craft</strong></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section class="skills section" id="skills">
+			<div class="container">
+				<div class="section-top reveal">
+					<div>
+						<p class="eyebrow"><span></span> What I bring</p>
+						<h2>Skills with room<br>to <em>expand.</em></h2>
+					</div>
+					<p class="section-aside">A constellation of practical technical abilities and creative instincts developed through experimentation.</p>
+				</div>
+				<div class="skills-grid">
+					<article class="skill-card glass-card reveal">
+						<div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+						<h3>HTML5 & Semantic Web</h3>
+						<p>Crafting accessible, SEO-friendly, and modern DOM architectures.</p>
+						<div class="meter"><span style="width: 88%"></span></div>
+						<small>88%</small>
+					</article>
+					<article class="skill-card glass-card reveal">
+						<div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+						<h3>CSS3 & Glassmorphism</h3>
+						<p>Sculpting deep responsive aesthetics, glow animations, and frosted glass.</p>
+						<div class="meter"><span style="width: 82%"></span></div>
+						<small>82%</small>
+					</article>
+					<article class="skill-card glass-card reveal">
+						<div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+						<h3>JavaScript & Canvas API</h3>
+						<p>Building high-performance 60fps particle physics and UI interactivity.</p>
+						<div class="meter"><span style="width: 75%"></span></div>
+						<small>75%</small>
+					</article>
+					<article class="skill-card glass-card reveal">
+						<div class="skill-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+						<h3>UI / UX & Cosmic Design</h3>
+						<p>Prioritizing human intuition and modern visual hierarchy.</p>
+						<div class="meter"><span style="width: 78%"></span></div>
+						<small>78%</small>
+					</article>
+					<article class="skill-card glass-card reveal">
+						<div class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+						<h3>Responsive Design</h3>
+						<p>Ensuring fluid, seamless immersion across mobile, tablets, and desktops.</p>
+						<div class="meter"><span style="width: 85%"></span></div>
+						<small>85%</small>
+					</article>
+					<article class="skill-card glass-card reveal">
+						<div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+						<h3>Git / Version Control</h3>
+						<p>Keeping code organized, tracked, and safely deployed across releases.</p>
+						<div class="meter"><span style="width: 70%"></span></div>
+						<small>70%</small>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section class="projects section" id="projects">
+			<div class="container">
+				<div class="section-top reveal">
+					<div>
+						<p class="eyebrow"><span></span> Selected projects</p>
+						<h2>Small ideas,<br><em>made tangible.</em></h2>
+					</div>
+					<p class="section-aside">Interactive digital creations blending technical performance with cosmic visual design.</p>
+				</div>
+				<div class="projects-grid">
+					<article class="project-card project-feature glass-card reveal">
+						<div class="project-image">
+							<img src="images/project1.jpg" data-fallback="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=85" alt="Gaming project concept">
+							<span class="project-index">01 / 03</span>
+						</div>
+						<div class="project-content">
+							<p class="project-type">Featured Concept</p>
+							<h3>Game Night Hub</h3>
+							<p>A high-octane community portal for sharing game highlights, live tournaments, and strategy boards.</p>
+							<div class="tag-row">
+								<span>HTML5</span>
+								<span>CSS Glassmorphism</span>
+								<span>JavaScript</span>
+								<span>Canvas</span>
+							</div>
+							<div class="project-links">
+								<a class="galaxy-btn" href="#contact">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+								<a class="galaxy-btn" href="#contact">Source code <i class="fa-brands fa-github"></i></a>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card glass-card reveal">
+						<div class="project-image">
+							<img src="images/project2.jpg" data-fallback="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Web design project concept">
+							<span class="project-index">02 / 03</span>
+						</div>
+						<div class="project-content">
+							<p class="project-type">Web Experience</p>
+							<h3>Personal Cosmic Dashboard</h3>
+							<p>A tranquil, neon-infused space to organize daily quests, habit tracking, and learning milestones.</p>
+							<div class="tag-row">
+								<span>UI / UX</span>
+								<span>Modern CSS</span>
+								<span>Local Storage</span>
+							</div>
+							<div class="project-links">
+								<a class="galaxy-btn" href="#contact">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card glass-card reveal">
+						<div class="project-image">
+							<img src="images/project3.jpg" data-fallback="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85" alt="Creative project concept">
+							<span class="project-index">03 / 03</span>
+						</div>
+						<div class="project-content">
+							<p class="project-type">Creative Experiment</p>
+							<h3>Visual Constellation Notes</h3>
+							<p>An interactive graph-based thought canvas connecting insights and digital book highlights.</p>
+							<div class="tag-row">
+								<span>Canvas API</span>
+								<span>Graph Physics</span>
+								<span>Design</span>
+							</div>
+							<div class="project-links">
+								<a class="galaxy-btn" href="#contact">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card glass-card reveal">
+						<div class="project-image">
+							<img src="images/test1.jpg" alt="Learning and development review form project">
+							<span class="project-index">04 / 04</span>
+						</div>
+						<div class="project-content">
+							<p class="project-type">Productivity Tool</p>
+							<h3>L&amp;D Review Form</h3>
+							<p>A focused review form for capturing learning and development feedback in a clear, organized workflow.</p>
+							<div class="tag-row">
+								<span>HTML5</span>
+								<span>CSS3</span>
+								<span>JavaScript</span>
+							</div>
+							<div class="project-links">
+								<a class="galaxy-btn" href="#contact">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery Section -->
+		<section class="gallery section" id="gallery">
+			<div class="container">
+				<div class="section-top reveal">
+					<div>
+						<p class="eyebrow"><span></span> Personal gallery</p>
+						<h2>Life in<br><em>little frames.</em></h2>
+					</div>
+					<p class="section-aside">Glimpses of daily life, scenic views, and milestones along the journey.</p>
+				</div>
+				<div class="gallery-grid">
+					<button class="gallery-item gallery-tall glass-card reveal galaxy-btn" data-gallery-index="0" type="button">
+						<img src="images/gallery/photo1.jpg" data-fallback="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85" alt="Scenic mountain horizon">
+						<span><i class="fa-solid fa-magnifying-glass-plus"></i> View Image</span>
+					</button>
+					<button class="gallery-item glass-card reveal galaxy-btn" data-gallery-index="1" type="button">
+						<img src="images/gallery/photo2.jpg" data-fallback="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1000&q=85" alt="Gathering and celebration moment">
+						<span><i class="fa-solid fa-magnifying-glass-plus"></i> View Image</span>
+					</button>
+					<button class="gallery-item gallery-wide glass-card reveal galaxy-btn" data-gallery-index="2" type="button">
+						<img src="images/gallery/photo3.jpg" data-fallback="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85" alt="Creative work setup">
+						<span><i class="fa-solid fa-magnifying-glass-plus"></i> View Image</span>
+					</button>
+					<button class="gallery-item glass-card reveal galaxy-btn" data-gallery-index="3" type="button">
+						<img src="images/gallery/photo4.jpg" data-fallback="https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?auto=format&fit=crop&w=1000&q=85" alt="Quiet twilight sky">
+						<span><i class="fa-solid fa-magnifying-glass-plus"></i> View Image</span>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contact section" id="contact">
+			<div class="container contact-grid">
+				<div class="contact-copy reveal">
+					<p class="eyebrow"><span></span> Let's connect</p>
+					<h2>Have an idea?<br><em>Say hello.</em></h2>
+					<p>Whether you want to discuss a project, talk about games, or collaborate on something new, my inbox is always open.</p>
+					<div class="contact-details">
+						<a class="glass-card contact-detail-item" href="mailto:hello@ronaldpontongan.com">
+							<span>Email</span>
+							hello@ronaldpontongan.com
+						</a>
+						<div class="glass-card contact-detail-item">
+							<span>Location</span>
+							Digos City, Davao del Sur, PH
+						</div>
+					</div>
+					<div class="contact-socials">
+						<a class="galaxy-btn" href="https://www.facebook.com/ronald.pontongan" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+						<a class="galaxy-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+						<a class="galaxy-btn" href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+						<a class="galaxy-btn" href="mailto:hello@ronaldpontongan.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+					</div>
+				</div>
+				<form class="contact-form glass-card reveal" id="contact-form">
+					<label for="name">
+						Your Name
+						<input id="name" name="name" type="text" placeholder="Jane Doe" required autocomplete="name">
+					</label>
+					<label for="email">
+						Your Email
+						<input id="email" name="email" type="email" placeholder="jane@example.com" required autocomplete="email">
+					</label>
+					<label for="message">
+						Your Message
+						<textarea id="message" name="message" rows="4" placeholder="Tell me what's on your mind..." required></textarea>
+					</label>
+					<button class="button button-primary galaxy-btn" type="submit">
+						Prepare Email <i class="fa-solid fa-paper-plane"></i>
+					</button>
+					<p class="form-note" id="form-note">This front-end form launches your email app directly with your draft.</p>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container footer-inner">
+			<a class="brand" href="#top">
+				<span class="logo-lockup" aria-hidden="true"><b>P</b><em>ontongan</em></span>
+				<span class="sr-only">Ronald Pontongan</span>
+			</a>
+			<p>Ronald Pontongan <span>•</span> 2026</p>
+			<a class="back-top galaxy-btn" href="#top" aria-label="Back to top">
+				<i class="fa-solid fa-arrow-up"></i>
+			</a>
+		</div>
+	</footer>
+
+	<!-- Gallery Lightbox Modal -->
+	<div class="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer" aria-hidden="true">
+		<button class="lightbox-close galaxy-btn" aria-label="Close image viewer"><i class="fa-solid fa-xmark"></i></button>
+		<button class="lightbox-prev galaxy-btn" aria-label="Previous image"><i class="fa-solid fa-arrow-left"></i></button>
+		<figure>
+			<img src="" alt="">
+			<figcaption></figcaption>
+		</figure>
+		<button class="lightbox-next galaxy-btn" aria-label="Next image"><i class="fa-solid fa-arrow-right"></i></button>
+	</div>
+
+	<!-- Main Script -->
+	<script src="script.js"></script>
+</body>
+</html>
+
