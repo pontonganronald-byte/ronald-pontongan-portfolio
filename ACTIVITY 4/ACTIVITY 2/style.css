@@ -1,0 +1,41 @@
+body{
+    font-family: 'Courier New',Courier,monospace;
+    background-color: #f2f2f2;
+
+}
+h1{
+    text-align:center;
+    
+}
+.portfolio-link{
+    display: block;
+    width: fit-content;
+    margin: 12px auto 0;
+    color: darkblue;
+    text-decoration: none;
+}
+.portfolio-link:hover{
+    text-decoration: underline;
+}
+table{
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+
+}
+th{
+    background-color: darkblue;
+    color:white;
+    padding:15px;
+
+}
+td{
+    border:1px solid black;
+    padding:15px;
+    text-align: center;
+
+}
+tr:hover{
+    background-color: lightblue;
+}

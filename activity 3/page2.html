@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Student Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Additional Information</h1>
+        <p>Please complete the details below to finish your registration.</p>
+
+        <form>
+            <label for="contact">Emergency Contact Name:</label>
+            <input type="text" id="contact" placeholder="Enter contact person's name" required>
+
+            <label for="contact-number">Emergency Contact Number:</label>
+            <input type="text" id="contact-number" placeholder="Enter contact number" required>
+
+            <label for="previous-school">Previous School:</label>
+            <input type="text" id="previous-school" placeholder="Enter your previous school" required>
+
+            <label for="enrollment-type">Enrollment Type:</label>
+            <select id="enrollment-type" required>
+                <option value="">Select enrollment type</option>
+                <option>New Student</option>
+                <option>Transferee</option>
+                <option>Returning Student</option>
+            </select>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" rows="4" placeholder="Enter any additional information"></textarea>
+
+            <label class="terms-label">
+                <input type="checkbox" required>
+                I confirm that the information provided is correct.
+            </label>
+
+            <button type="button" class="next-btn" onclick="alert('Registration completed successfully!')">Complete Registration</button>
+            <a href="index.html" class="back-btn">Back to Registration</a>
+        </form>
+    </div>
+</body>
+</html>

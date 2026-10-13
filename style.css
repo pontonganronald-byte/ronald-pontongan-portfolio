@@ -962,6 +962,67 @@ button {
 	font-size: 0.78rem;
 }
 
+.activity-detail {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	padding: 120px 0 80px;
+}
+
+.activity-detail-card {
+	width: min(920px, 100%);
+	margin: 0 auto;
+	padding: clamp(24px, 5vw, 56px);
+}
+
+.activity-back {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--cyan);
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.activity-title {
+	margin-top: 28px;
+	font-size: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.activity-description {
+	max-width: 66ch;
+	margin-top: 18px;
+	color: var(--text-muted);
+	font-size: 1.05rem;
+}
+
+.activity-preview {
+	margin-top: 42px;
+}
+
+.activity-preview h2 {
+	font-size: 1.5rem;
+}
+
+.activity-preview-placeholder {
+	display: grid;
+	min-height: clamp(220px, 38vw, 360px);
+	margin-top: 18px;
+	padding: 28px;
+	place-items: center;
+	border: 1px dashed rgba(0, 242, 254, 0.35);
+	border-radius: 14px;
+	background:
+		radial-gradient(circle at 50% 45%, rgba(0, 242, 254, 0.08), transparent 55%),
+		rgba(5, 5, 16, 0.35);
+	color: var(--text-muted);
+	text-align: center;
+}
+
+.activity-preview-placeholder p {
+	max-width: 38ch;
+}
+
 /* ==========================================================================
    GALLERY SECTION
    ========================================================================== */
@@ -1445,4 +1506,3 @@ button {
 		right: 10px;
 	}
 }
-

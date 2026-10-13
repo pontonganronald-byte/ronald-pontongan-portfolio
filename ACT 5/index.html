@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Need for Speed: Night Street Racing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- In-Game Neon HUD (Hidden during garage selection) -->
+  <div class="hud hidden" id="hud">
+    <div class="hud-panel score-panel">
+      <span class="hud-label">SCORE</span>
+      <b class="hud-value" id="score">0</b>
+    </div>
+
+    <!-- Speedometer Gauge -->
+    <div class="hud-panel speedo-panel">
+      <div class="speedo-wrap">
+        <svg class="speedo-dial" viewBox="0 0 140 80">
+          <path class="speedo-bg" d="M 20 70 A 50 50 0 0 1 120 70" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="8" stroke-linecap="round"/>
+          <path id="speedo-meter" class="speedo-bar" d="M 20 70 A 50 50 0 0 1 120 70" fill="none" stroke="url(#speedGradient)" stroke-width="8" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="157"/>
+          <defs>
+            <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00f0ff" />
+              <stop offset="70%" stop-color="#ff007f" />
+              <stop offset="100%" stop-color="#ffea00" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="speedo-content">
+          <span class="speedo-number" id="speed">0</span>
+          <span class="speedo-unit">KM/H</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hud-panel best-panel">
+      <span class="hud-label">RECORD</span>
+      <b class="hud-value" id="best">0</b>
+    </div>
+  </div>
+
+  <!-- Garage / Car Selection Showroom Screen -->
+  <div class="garage-overlay" id="garage-overlay">
+    <div class="garage-topbar">
+      <div class="brand-badge">UNDERGROUND TUNING</div>
+      <h1 class="garage-title">VEHICLE SHOWROOM</h1>
+      <p class="garage-subtitle">Choose your ride, tune your paint, and conquer the night.</p>
+    </div>
+
+    <div class="garage-deck">
+      <!-- Car Selection Header -->
+      <div class="car-selector-row">
+        <button id="btn-prev-car" class="arrow-btn" aria-label="Previous car">&#9664;</button>
+        <div class="car-title-box">
+          <h2 id="car-name">STREET COUPE</h2>
+          <span class="car-type-badge" id="car-category">BALANCED TUNER</span>
+        </div>
+        <button id="btn-next-car" class="arrow-btn" aria-label="Next car">&#9654;</button>
+      </div>
+
+      <!-- Performance Stats -->
+      <div class="stats-card">
+        <div class="stat-line">
+          <span class="stat-tag">TOP SPEED</span>
+          <div class="stat-bar-track">
+            <div class="stat-bar-fill speed-fill" id="stat-speed"></div>
+          </div>
+        </div>
+        <div class="stat-line">
+          <span class="stat-tag">HANDLING</span>
+          <div class="stat-bar-track">
+            <div class="stat-bar-fill handling-fill" id="stat-handling"></div>
+          </div>
+        </div>
+        <div class="stat-line">
+          <span class="stat-tag">ACCELERATION</span>
+          <div class="stat-bar-track">
+            <div class="stat-bar-fill accel-fill" id="stat-accel"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Paint Swatches -->
+      <div class="custom-panel">
+        <div class="section-label">NEON PAINT SHOP</div>
+        <div class="palette-row" id="palette-row"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="cta-row">
+        <button id="btn-start" class="btn-glow-primary">START RACE</button>
+        <button id="btn-graphics" class="btn-glow-secondary">GRAPHICS: HIGH</button>
+      </div>
+
+      <div class="garage-instructions">
+        <span>Steer: <b>A / D</b> or <b>&larr; / &rarr;</b></span>
+        <span>&bull;</span>
+        <span>Launch: <b>ENTER</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crash / Game Over Overlay -->
+  <div class="overlay hidden" id="gameover-overlay">
+    <div class="gameover-box">
+      <div class="crash-glitch" id="crash-title">TOTALED</div>
+      <p class="gameover-msg" id="gameover-msg">Wrecked on the underground circuit</p>
+
+      <div class="gameover-records">
+        <div class="record-box">
+          <span class="record-label">FINAL SCORE</span>
+          <b class="record-num" id="final-score">0</b>
+        </div>
+        <div class="record-box">
+          <span class="record-label">BEST RECORD</span>
+          <b class="record-num highlight" id="final-best">0</b>
+        </div>
+      </div>
+
+      <div class="gameover-buttons">
+        <button id="btn-retry" class="btn-glow-primary">RETRY RACE</button>
+        <button id="btn-garage" class="btn-glow-secondary">RETURN TO GARAGE</button>
+      </div>
+      <p class="help">Press ENTER or SPACE to retry</p>
+    </div>
+  </div>
+
+  <!-- Mobile Touch Controls -->
+  <div class="pad" id="touch-pad">
+    <button id="btnL" aria-label="Steer Left"><span>&#9664;</span></button>
+    <button id="btnR" aria-label="Steer Right"><span>&#9654;</span></button>
+  </div>
+
+  <!-- Three.js r128 Library (loaded before script.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Main Game Script -->
+  <script src="script.js"></script>
+</body>
+</html>

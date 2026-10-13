@@ -1,0 +1,47 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: bisque;
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: #333;
+    margin-top: 25px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul,
+ol {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+li {
+    margin: 8px 0;
+}

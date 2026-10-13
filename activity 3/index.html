@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Registration</h1>
+        <a href="../index.html" class="back-btn">Back to Portfolio</a>
+        <form>
+        <label for="fullname">Name:</label>
+        <Input type ="text" id="fullname"placeholder="Enter your name">
+        <label for="email">Email:</label>
+        <Input type ="email" id="email"placeholder="Enter your email">
+        <label for="password">Password:</label>
+        <Input type ="password" id="password"placeholder="Enter your password">
+
+        <label>Gender</label>
+        <div class="gender">
+            <input type="radio" id ="female" name="Gender">
+            <label for="female">female</label>
+            <input type="radio" id ="male" name="Gender">
+            <label for="male">male</label>
+            
+        
+        </div>
+        <label>Course</label>
+        <select>
+            <option>Select your course</option>
+            <option>BSIT</option>
+            <option>DIT</option>
+            <option>BSIS</option>
+        </select>
+        <label>Year Level</label>
+        <select>
+            <option>select level</option>
+            <option>1st year</option>
+            <option>2nd year</option>
+            <option>3rd year</option>
+            <option>4th year</option>
+        </select>
+        <label>Address </label>
+        <textarea rows="4" placeholder="Enter your address"></textarea>
+       
+            
+        
+       <button type="button" class="next-btn" onclick="window.location.href='page2.html'">Register</button>
+    </form>
+    
+
+        
+
+    </div>
+</body>
+</html>

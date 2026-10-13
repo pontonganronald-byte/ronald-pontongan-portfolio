@@ -1,0 +1,110 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightblue;
+    margin: 0;
+    padding: 20px;
+
+}
+.form-container{
+    width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+h1{
+    text-align: center;
+    color: darkblue;
+    margin-bottom: 25px;
+
+}
+p{
+    text-align: center;
+    line-height: 1.5;
+    color: #444;
+}
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus{
+    outline: 2px solid darkblue;
+}
+.gender{
+    display:flex;
+    gap: 10px;
+    align-items: center;
+}
+.gender label{
+    margin: 0;
+    font-weight: normal;
+}
+.terms-label{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: normal;
+}
+.terms-label input{
+    width: auto;
+}
+button{
+    width:100px;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: navy;
+}
+.next-btn{
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}    
+.next-btn:hover{
+    background-color: navy;
+
+
+}
+.back-btn{
+    display: block;
+    margin-top: 15px;
+    color: darkblue;
+    text-align: center;
+    text-decoration: none;
+}
+.back-btn:hover{
+    text-decoration: underline;
+}

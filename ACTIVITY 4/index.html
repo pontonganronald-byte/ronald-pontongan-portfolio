@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Place</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <a class="portfolio-link" href="../index.html">Back to Portfolio</a>
+    <div id="map"></div>
+
+    <div class="map-ui">
+        <div class="search-panel" id="searchPanel">
+            <div class="search-title">My Favorite Place</div>
+            <div class="search-bar">
+                <button id="searchButton" type="button" class="search-button" aria-label="Search places">
+                    <span class="icon-search">⌕</span>
+                </button>
+                <input id="searchInput" type="text" placeholder="Search places" aria-label="Search places">
+                <button id="clearSearchButton" type="button" class="clear-search" aria-label="Clear search">×</button>
+            </div>
+            <div id="searchResults" class="search-results" aria-live="polite"></div>
+        </div>
+
+        <div id="tipBox" class="tip-box" role="status">
+            <span>Click the map to add a place</span>
+            <button type="button" class="dismiss-tip" aria-label="Dismiss tip">×</button>
+        </div>
+    </div>
+
+    <button id="myLocationButton" type="button" class="my-location-button">My location</button>
+
+    <div id="layerSwitcher" class="layer-switcher">
+        <button id="layerToggle" type="button" class="layer-toggle">
+            <span class="layer-toggle-preview"></span>
+            <span>Layers</span>
+        </button>
+        <div id="layerMenu" class="layer-menu" aria-label="Map layers">
+            <button type="button" class="layer-option active" data-layer="map">
+                <span class="layer-swatch swatch-map"></span>
+                <span>Map</span>
+            </button>
+            <button type="button" class="layer-option" data-layer="satellite">
+                <span class="layer-swatch swatch-satellite"></span>
+                <span>Satellite</span>
+            </button>
+            <button type="button" class="layer-option" data-layer="terrain">
+                <span class="layer-swatch swatch-terrain"></span>
+                <span>Terrain</span>
+            </button>
+            <button type="button" class="layer-option nearby-toggle" data-nearby="true">
+                <span class="layer-swatch swatch-nearby"></span>
+                <span>Nearby places</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="saved-panel" id="savedPanel">
+            <button type="button" class="saved-toggle" id="savedToggle">
+                <span>Saved places</span>
+                <span id="savedPlaceCount" class="saved-count">0</span>
+            </button>
+            <div id="savedPlacesList" class="saved-places-list" aria-live="polite"></div>
+            <div class="saved-actions">
+                <button type="button" id="clearSavedButton" class="mini-button">Clear all</button>
+                <button type="button" id="exportSavedButton" class="mini-button alt">Export JSON</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
